@@ -1,0 +1,36 @@
+body {
+    background-color: #f2f9ff;
+    background-image: url(./stethoscope-147700__340.webp);
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+  }
+  
+  h1 {
+    color: #0058a3;
+  }
+  
+  label {
+    color: #0058a3;
+  }
+  
+  button {
+    background-color: #0058a3;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #003e6b;
+  }
+
+.form_box{
+    margin-top: 250px;
+    margin-left: 350px;
+}
+.center{
+    text-align: center;
+}
+  

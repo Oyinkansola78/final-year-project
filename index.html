@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Appointment Scheduling System</title>
+        <script src="https://kit.fontawesome.com/ebc6a7178a.js" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body class="container">
+        <div class="form_box">
+            <h1>Appointment Scheduling System</h1>
+            <form action="login.php" method="post" class="mt-3">
+                <label for="username">Client/Admin ID:</label>
+                <input type="text" name="username" id="username">
+                <br><br>
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password">
+                <br><br>
+                <label for="user-type">Login as:</label>
+                <select name="user-type" id="user-type">
+                    <option value="client">Client</option>
+                    <option value="admin">Admin</option>
+                </select>
+                <br><br>
+                <button type="submit">Login</button>
+                <button type="submit">Signin</button>
+            </form>
+        </div>
+        <div id="calendar"></div>
+    </body>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar-scheduler@6.1.4/index.global.min.js'></script>
+    <script>
+
+      document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          initialView: 'resourceTimelineWeek'
+        });
+        calendar.render();
+      });
+
+    </script>
+  <!-- <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var calendarEl = document.getElementById('calendar');
+      var calendar = new FullCalendar.Calendar(calendarEl, {
+        plugins: [ 'dayGrid' ],
+        selectable: true,
+        select: function(info) {
+          // Display a confirmation dialog
+          if (confirm("Do you want to book this time slot?")) {
+            // Make an AJAX request to book the time slot
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+              if (this.readyState == 4 && this.status == 200) {
+                // Reload the calendar to show the booked time slot
+                calendar.refetchEvents();
+              }
+            };
+            xhr.open("POST", "/book_time_slot.php", true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhr.send("start=" + info.start.toISOString() + "&end=" + info.end.toISOString());
+          }
+        },
+        events: {
+          url: '/get_booked_time_slots.php',
+          method: 'POST',
+          failure: function() {
+            alert('There was an error fetching booked time slots!');
+          }
+        }
+      });
+      calendar.render();
+    });
+  </script> -->
+</html>
