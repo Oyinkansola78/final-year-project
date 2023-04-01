@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Appointment Scheduling System | Login</title>
+        <script src="https://kit.fontawesome.com/ebc6a7178a.js" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body class="container">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+            <a class="navbar-brand" href="./index.html"><img src="./universal-health-care-1095124__340.webp" class="logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                <a class="nav-link px-3" aria-current="page" href="./index.html"><h2>Home</h2></a>
+                <a class="nav-link px-3" href="#"><h2>About</h2></a>
+                <a class="nav-link px-3" href="#"><h2>Contact</h2></a>
+                </div>
+            </div>
+            <a class="btn btn-outline-primary me-2" type="button" href="login.html">Login</a>
+            <button class="btn btn-outline-primary me-2" type="button">Sign Up</button>
+            </div>
+        </nav>
+        <div class="form_box">
+            <h1>Appointment Scheduling System</h1>
+            <form action="login.php" method="post" class="mt-3">
+                <label for="username">Client/Admin ID:</label>
+                <input type="email" name="username" id="username" placeholder="example@example.com">
+                <br><br>
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password">
+                <br><br>
+                <label for="user-type">Login as:</label>
+                <select name="user-type" id="user-type">
+                    <option value="client">Client</option>
+                    <option value="admin">Admin</option>
+                </select>
+                <br><br>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+        <footer class="position-absolute top-100 start-50 translate-middle">
+            <p>Created by Oyinkansola Ayannuga, Copyright &copy; 2023 </p>
+        </footer>
+    </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</html>

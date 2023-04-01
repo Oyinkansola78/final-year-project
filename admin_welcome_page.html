@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Appointment Scheduling System | Clients</title>
+        <script src="https://kit.fontawesome.com/ebc6a7178a.js" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html"><img src="./universal-health-care-1095124__340.webp" class="logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                    <a class="nav-link px-3" aria-current="page" href="./index.html"><h2>Home</h2></a>
+                    <a class="nav-link px-3" href="#"><h2>About</h2></a>
+                    <a class="nav-link px-3" href="#"><h2>Contact</h2></a>
+                    </div>
+                </div>
+                <a class="btn btn-outline-primary me-2" type="button" href="login.html">Login</a>
+                <button class="btn btn-outline-primary me-2" type="button">Sign Up</button>
+                </div>
+            </nav>
+        </div>
+        <div class="tab">
+            <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Dashboard</button>
+            <button class="tablinks" onclick="openCity(event, 'Paris')">Appointments</button>
+            <button class="tablinks" onclick="openCity(event, 'Tokyo')">Admin Management</button>
+        </div>  
+        <div id="London" class="tabcontent">
+            <div class="d-flex justify-content-around">
+                <div class="dashboard_box">
+                    <h3>All Appointments</h3>
+                    <h4>1000</h4>
+                </div>
+                <div class="dashboard_box">
+                    <h3>Upcoming Appointments</h3>
+                    <h4>100</h4>
+                </div>
+                <div class="dashboard_box">
+                    <h3>All Appointments</h3>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center mt-5">
+                <button type="button" class="btn btn-primary">Logout</button>
+            </div>
+        </div>
+        <div id="Paris" class="tabcontent">
+            <table class="table">
+                <thead class="table-primary">
+                  <tr>
+                    <th scope="col">S/N</th>
+                    <th scope="col">Patient Details</th>
+                    <th scope="col">Appointment Details</th>
+                    <th scope="col">Duration</th>
+                    <th scope="col">Date Created</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>John Doe</td>
+                    <td>Apr 21, 2023 10:00 am</td>
+                    <td>120 minutes</td>
+                    <td>April 6, 2023 </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>John Doe</td>
+                    <td>Apr 21, 2023 10:00 am</td>
+                    <td>120 minutes</td>
+                    <td>April 6, 2023</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>John Doe</td>
+                    <td>Apr 21, 2023 10:00 am</td>
+                    <td>120 minutes</td>
+                    <td>April 6, 2023</td>
+                  </tr>
+                </tbody>
+            </table> 
+        </div>
+
+        <div id="Tokyo" class="tabcontent">
+            <table class="table">
+                <thead class="table-primary">
+                  <tr>
+                    <th scope="col">S/N</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>John Doe</td>
+                    <td>johndoe@gmail.com</td>
+                    <td>0708099090</td>
+                    <td>Active</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>John Doe</td>
+                    <td>johndoe@gmail.com</td>
+                    <td>0708099090</td>
+                    <td>Active</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>John Doe</td>
+                    <td>johndoe@gmail.com</td>
+                    <td>0708099090</td>
+                    <td>Active</td>
+                  </tr>
+                </tbody>
+            </table> 
+            <div class="d-flex justify-content-center">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Manage Admin</button>
+            </div>
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="staticBackdropLabel">Add New Admin</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Phone Number</label>
+                            <input type="number" class="form-control" id="exampleFormControlInput1" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Status</label>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected value="1">Active</option>
+                                <option value="2">Inactive</option>
+                              </select>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Add Admin</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+        <footer class="position-absolute top-100 start-50 translate-middle"> 
+            <p> Created by Oyinkansola Ayannuga, Copyright &copy; 2023 </p>
+        </footer>
+    </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  <script>
+    function openCity(evt, cityName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+    
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+    </script>
+</html>
