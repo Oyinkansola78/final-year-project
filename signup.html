@@ -24,25 +24,30 @@
                 </div>
             </div>
             <a class="btn btn-outline-primary me-2" type="button" href="login.html">Login</a>
-            <a class="btn btn-outline-primary me-2" type="button" href="signup.html">Sign Up</a>
+            <button class="btn btn-outline-primary me-2" type="button">Sign Up</button>
             </div>
         </nav>
         <div class="form_box">
             <h1>Appointment Scheduling System</h1>
-            <form action="login.php" method="post" class="mt-3">
-                <label for="username">Client/Admin ID:</label>
-                <input type="email" name="username" id="username" placeholder="example@example.com">
+            <form action="login.php" method="post" class="mt-3 signup_form">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Full Name</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" required>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Email address (Client ID)</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" required>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="********" required>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Phone Number</label>
+                    <input type="number" class="form-control" id="exampleFormControlInput1" required>
+                </div>
                 <br><br>
-                <label for="password">Password:</label>
-                <input type="password" name="password" id="password">
-                <br><br>
-                <label for="user-type">Login as:</label>
-                <select name="user-type" id="user-type">
-                    <option value="client">Client</option>
-                    <option value="admin">Admin</option>
-                </select>
-                <br><br>
-                <button type="submit">Login</button>
+                <button type="submit">Sign Up</button>
             </form>
         </div>
         <footer class="position-absolute top-100 start-50 translate-middle">
